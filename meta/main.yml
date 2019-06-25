@@ -1,6 +1,6 @@
 galaxy_info:
   author: Mihai Criveti
-  description: Mihai Criveti is a Cloud Native competency leader, responsible for designing hybrid / multi-cloud solutions that incorporate microservices and cognitive systems. Passionate about Data Science, Python, Machine Learning and Kubernetes. https://www.linkedin.com/in/crivetimihai/
+  description: Basic framework for packer provisioning tasks.
   company: cmihai
   license: MIT
   min_ansible_version: 2.4
