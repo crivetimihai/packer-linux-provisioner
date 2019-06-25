@@ -1,0 +1,27 @@
+---
+# tasks file for packer-linux-provisioner
+- name: get kernel release
+  command: uname -r
+  changed_when: false
+  register: kernel_release
+
+# https://github.com/mitchellh/vagrant/issues/1172
+- name: fix slow DNS
+  lineinfile:
+    dest: /etc/sysconfig/network
+    regexp: '^RES_OPTIONS'
+    line: 'RES_OPTIONS="single-request-reopen"'
+    state: present
+
+
+- name: configure sshd
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  loop:
+    - regexp: "^#?UseDNS"
+      line: "UseDNS no"
+
+    - regexp: "^#?GSSAPIAuthentication"
+      line: "GSSAPIAuthentication no"

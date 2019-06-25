@@ -1,0 +1,19 @@
+galaxy_info:
+  author: Mihai Criveti
+  description: Mihai Criveti is a Cloud Native competency leader, responsible for designing hybrid / multi-cloud solutions that incorporate microservices and cognitive systems. Passionate about Data Science, Python, Machine Learning and Kubernetes. https://www.linkedin.com/in/crivetimihai/
+  company: cmihai
+  license: MIT
+  min_ansible_version: 2.4
+  platforms:
+  - name: Fedora
+    versions:
+    - 30
+  - name: EL
+    versions:
+    - 7
+    - 8
+  galaxy_tags:
+    - packer
+    - packaging
+
+dependencies: []
