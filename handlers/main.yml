@@ -1,6 +1,3 @@
 ---
 # handlers file for packer-linux-provisioner
-- name: get kernel release
-  command: uname -r
-  changed_when: false
-  register: kernel_release
+
